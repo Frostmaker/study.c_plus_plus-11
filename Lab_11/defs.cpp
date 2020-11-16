@@ -1,5 +1,5 @@
-#include <iostream>;
-#include <iomanip>;
+#include <iostream>
+#include <iomanip>
 
 #ifndef MAX_ROWS, MAX_COLS
 
@@ -90,6 +90,27 @@ void matrix_transposition(int matr[MAX_ROWS][MAX_COLS], int rows, int cols, int 
             tr_matr[j][i] = matr[i][j];
         }
     }
+
+    return;
+}
+
+
+void delete_row_and_col(int matr[MAX_ROWS][MAX_COLS], int& rows, int& cols, int M, int N)
+{
+    // Функция удаляет из матрицы строку с индексом <M> и столбец с индексом <N>
+
+    for (int i{ M }; i < rows - 1; i++) {
+        for (int j{ 0 }; j < cols; j++) {
+            matr[i][j] = matr[i + 1][j];
+        }
+    }
+    rows--;
+    for (int i{ 0 }; i < rows; i++) {
+        for (int j{ N }; j < cols - 1; j++) {
+            matr[i][j] = matr[i][j + 1];
+        }
+    }
+    cols--;
 
     return;
 }

@@ -10,3 +10,4 @@ int count_zero_rows(int matr[MAX_ROWS][MAX_COLS], int rows, int cols);
 void deleteFirstRow(int matr[MAX_ROWS][MAX_COLS], int& rows, int& cols);
 void add_row_in_matrix(int matr[MAX_ROWS][MAX_COLS], int& rows, int& cols, int K, int* arr);
 void matrix_transposition(int matr[MAX_ROWS][MAX_COLS], int rows, int cols, int tr_matr[MAX_ROWS][MAX_COLS]);
+void delete_row_and_col(int matr[MAX_ROWS][MAX_COLS], int& rows, int& cols, int M, int N);
